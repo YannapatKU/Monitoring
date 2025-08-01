@@ -15,6 +15,7 @@ import StudentList2 from '../views/StudentList2.vue'
 import StudentList3 from '../views/StudentList3.vue'
 import StudentList4 from '../views/StudentList4.vue'
 import StudentList5_8 from '../views/StudentList5_8.vue'
+import TeachChair from '../views/TeachChair.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -54,6 +55,11 @@ const router = createRouter({
       path: '/TeachPro',
       name: 'TeachPro',
       component: TeachPro,
+    },
+    {
+      path: '/TeachChair',
+      name: 'TeachChair',
+      component: TeachChair,
     },
     {
       path: '/Condition',

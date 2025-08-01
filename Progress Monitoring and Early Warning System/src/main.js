@@ -29,6 +29,8 @@ import Chart from 'primevue/chart';
 import Divider from 'primevue/divider';
 import AutoComplete from 'primevue/autocomplete';
 import Chip from 'primevue/chip';
+import ScrollPanel from 'primevue/scrollpanel';
+import VirtualScroller from 'primevue/virtualscroller';
 
 
 
@@ -63,5 +65,7 @@ app.component('Chart', Chart);
 app.component('Divider', Divider);
 app.component('AutoComplete', AutoComplete);
 app.component('Chip', Chip);
+app.component('ScrollPanel', ScrollPanel);
+app.component('VirtualScroller', VirtualScroller);
 
 app.mount('#app')

@@ -84,6 +84,15 @@ const OnFormSubmit = ({ username, password }) => {
             <Router-Link to="/TeachPro">
               <Button label="Teacher Login" style="width: 100%;"/>
             </Router-Link>
+            <Router-Link to="/TeachChair">
+              <Button label="อาจารย์ประธานหลักสูตร" style="width: 100%;"/>
+            </Router-Link>
+             <Router-Link to="/TeachChair">
+              <Button label="อาจารย์ประธานหลักสูตร" style="width: 100%;"/>
+            </Router-Link>
+             <Router-Link to="/TeachChair">
+              <Button label="อาจารย์ประธานหลักสูตร" style="width: 100%;"/>
+            </Router-Link>
             <Router-Link to="/AdminPro">
               <Button label="Admin Login" style="width: 100%;"/>
             </Router-Link>

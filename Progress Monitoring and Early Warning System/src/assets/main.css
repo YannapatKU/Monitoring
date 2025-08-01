@@ -110,10 +110,9 @@ a,
 }
 
 .sidebar-subsection {
-  
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -151,10 +150,11 @@ a,
 }
 
 .profile-details {
-  font-size: 1.1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem 7rem; /* Adjust the spacing between rows and columns */
+  font-size: 1rem;
 }
 
-.profile-details p {
-  margin-bottom: 0.7rem;
-}
+
 
