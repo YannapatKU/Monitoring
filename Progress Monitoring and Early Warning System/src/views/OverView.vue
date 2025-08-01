@@ -3,9 +3,9 @@
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
         <Avatar shape="circle" />
-        <span class="font-bold">ธธธธธ</span>
+        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">นิสิตปัจจุบัน</p></span>
       </div>
-      <br>
+      <Divider />
       <div class="sidebar-content">
         <Router-Link to="/profile" class="sidebar-item">
           <p ><i class="pi pi-user"></i>โปรไฟล์</p>
@@ -45,7 +45,7 @@
             </template>
 
             <template #content>
-              <Chart type="doughnut" :data="chartData" :options="chartOptions" style="width: 80%; height: 300px;" />
+              <Chart type="doughnut" :data="chartData" :options="chartOptions" style="width: 80%; height: 300px; margin: 0 auto;" />
             </template>
           </Card>
 
@@ -55,7 +55,7 @@
             </template>
 
             <template #content>
-              <Chart type="line" :data="chartLineData" :options="chartLineOptions" style="width: 80%; height: 300px;" />
+              <Chart type="line" :data="chartLineData" :options="chartLineOptions" style="width: 100%; height: 300px;" />
             </template>
           </Card>
 

@@ -43,30 +43,34 @@
         <div class="navbar-title">ระบบติดตามสถานะการเรียน</div>
         <div class="navbar-right">
           <span>ชื่อผู้ใช้</span>
-          <Router-Link to="/">
-            <Button icon="pi pi-power-off" style="background-color: #02BC77; border: none;"/>
+          <Router-Link to="/"> 
+          <Button icon="pi pi-power-off" style="background-color: #02BC77; border: none;"/>
           </Router-Link>
         </div>
       </nav>
 
-      <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">โปรไฟล์ของฉัน</h2>
-      <Card style="width: 25rem ;margin: 0 auto; height: 70vh;">
-        <template #header>
-          <div style="margin-top: 2rem; text-align: center;">
-            <Avatar shape="circle" size="xlarge" style="align-items: center;"/>
-          </div>
-        </template>
-        <template #content>
-          <div class="profile-details">
-            <p><strong>ชื่อ</strong> ชื่อ</p>
-            <p><strong>นามสกุล:</strong> นามสกุล</p>
-            <p><strong>รหัสนิสิต:</strong> 6xxxxxxxxx</p>
-            <p><strong>ชั้นปี:</strong> 3</p>
-            <p><strong>คณะ:</strong> วิศวกรรมศาสตร์</p>
-            <p><strong>สาขา:</strong> วิศวกรรมคอมพิวเตอร์</p>
-          </div>
-        </template>
-      </Card>
+      
+      <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">ผลการศึกษา</h2>
+      <IconField style="width: 90%; margin: 0 auto;">
+        <InputIcon class="pi pi-search" />
+        <InputText placeholder="ค้นหา (ชื่อวิชา, รหัสวิชา)" style="border-radius: 100px; width: 100%;" />
+    </IconField>
+
+    <div style="text-align: left; margin-left: 4.5rem; margin-top: 2rem;">
+    <Chip label="ปีการศึกษาที่ 1" style="background-color: green; color: white; margin: 0 auto; margin-bottom: 2rem;" />
+        <DataTable :value="students" showGridlines tableStyle="width: 90%;">
+          <Column field="studentId" header="รหัสนิสิต"></Column>
+          <Column field="fullName" header="ชื่อ-นามสกุล"></Column>
+          <Column field="academicYear" header="ปีการศึกษา"></Column>
+          <Column field="semester" header="ภาค"></Column>
+          <Column field="phoneNumber" header="เบอร์โทรศัพท์"></Column>
+          <Column field="schedule" header="ตาราง">
+            <template #body>
+              <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
+            </template>
+          </Column>
+        </DataTable>
+    </div>
     </div>
   </div>
 </template>
@@ -75,12 +79,11 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
-const visible = ref(true); 
-
 const isChevronOpen = ref(false);
 
 const toggleChevron = () => {
   isChevronOpen.value = !isChevronOpen.value;
 };
+const visible = ref(true);
 </script>
 

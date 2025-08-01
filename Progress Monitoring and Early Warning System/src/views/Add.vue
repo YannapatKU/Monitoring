@@ -3,7 +3,7 @@
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
         <Avatar shape="circle" />
-        <span class="font-bold">ธธธธธ</span>
+        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">นิสิตปัจจุบัน</p></span>
       </div>
       <Divider />
       <div class="sidebar-content">

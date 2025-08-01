@@ -10,7 +10,11 @@ import ConditionView from '../views/ConditionView.vue'
 import AdminPro from '../views/AdminPro.vue'
 import Add from '../views/Add.vue'
 import AdStudent from '../views/AdStudent.vue'
-import StudentList from '../views/StudentList.vue'
+import StudentList1 from '../views/StudentList1.vue'
+import StudentList2 from '../views/StudentList2.vue'
+import StudentList3 from '../views/StudentList3.vue'
+import StudentList4 from '../views/StudentList4.vue'
+import StudentList5_8 from '../views/StudentList5_8.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -57,9 +61,29 @@ const router = createRouter({
       component: ConditionView,
     },
     {
-      path: '/StudentList',
-      name: 'StudentList',
-      component: StudentList,
+      path: '/StudentList1',
+      name: 'StudentList1',
+      component: StudentList1,
+    },
+    {
+      path: '/StudentList2',
+      name: 'StudentList2',
+      component: StudentList2,
+    },
+    {
+      path: '/StudentList3',
+      name: 'StudentList3',
+      component: StudentList3,
+    },
+    {
+      path: '/StudentList4',
+      name: 'StudentList4',
+      component: StudentList4,
+    },
+    {
+      path: '/StudentList5-8',
+      name: 'StudentList5-8',
+      component: StudentList5_8,
     },
     {
       path: '/AdminPro',

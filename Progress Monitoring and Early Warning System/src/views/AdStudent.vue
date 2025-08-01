@@ -3,7 +3,7 @@
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
         <Avatar shape="circle" />
-        <span class="font-bold">ธธธธธ</span>
+        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">นิสิตปัจจุบัน</p></span>
       </div>
       <Divider />
       <div class="sidebar-content">
@@ -33,7 +33,7 @@
       </nav>
 
       
-      <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">รายชื่อนิสิต</h2>
+    <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">รายชื่อนิสิต</h2>
       
     <IconField style="width: 90%; margin: 0 auto;">
         <InputIcon class="pi pi-search" />
