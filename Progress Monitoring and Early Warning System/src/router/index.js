@@ -5,17 +5,23 @@ import EduView from '../views/EduView.vue'
 import OverView from '../views/OverView.vue'
 import TableView from '../views/TableView.vue'
 import ForgetView from '../views/ForgetView.vue'
-import TeachPro from '../views/TeachPro.vue'
 import ConditionView from '../views/ConditionView.vue'
 import AdminPro from '../views/AdminPro.vue'
 import Add from '../views/Add.vue'
 import AdStudent from '../views/AdStudent.vue'
-import StudentList1 from '../views/StudentList1.vue'
-import StudentList2 from '../views/StudentList2.vue'
-import StudentList3 from '../views/StudentList3.vue'
-import StudentList4 from '../views/StudentList4.vue'
-import StudentList5_8 from '../views/StudentList5_8.vue'
-import TeachChair from '../views/TeachChair.vue'
+import TeachPro from '../views/Teacherviews/TeachPro.vue'
+import StudentList1 from '../views/Teacherviews/StudentList1.vue'
+import StudentList2 from '../views/Teacherviews/StudentList2.vue'
+import StudentList3 from '../views/Teacherviews/StudentList3.vue'
+import StudentList4 from '../views/Teacherviews/StudentList4.vue'
+import StudentList5_8 from '../views/Teacherviews/StudentList5_8.vue'
+import TeachChair from '../views/TeacherChairviews/TeachChair.vue'
+import ChairStudentList1 from '../views/TeacherChairviews/ChairStudentList1.vue'
+import ChairStudentList2 from '../views/TeacherChairviews/ChairStudentList2.vue'
+import ChairStudentList3 from '../views/TeacherChairviews/ChairStudentList3.vue'
+import ChairStudentList4 from '../views/TeacherChairviews/ChairStudentList4.vue'
+import ChairStudentList5_8 from '../views/TeacherChairviews/ChairStudentList5_8.vue'
+import ChairField from '../views/TeacherChairviews/ChairField.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,11 +62,7 @@ const router = createRouter({
       name: 'TeachPro',
       component: TeachPro,
     },
-    {
-      path: '/TeachChair',
-      name: 'TeachChair',
-      component: TeachChair,
-    },
+    
     {
       path: '/Condition',
       name: 'Condition',
@@ -105,6 +107,37 @@ const router = createRouter({
       path: '/AdStudent',
       name: 'AdStudent',
       component: AdStudent,
+    },
+    {
+      path: '/TeachChair',
+      name: 'TeachChair',
+      component: TeachChair,
+    },
+    {
+      path: '/ChairStudentList1',
+      name: 'ChairStudentList1',
+      component: ChairStudentList1,
+    },{
+      path: '/ChairStudentList2',
+      name: 'ChairStudentList2',
+      component: ChairStudentList2,
+    },{
+      path: '/ChairStudentList3',
+      name: 'ChairStudentList3',
+      component: ChairStudentList3,
+    },{
+      path: '/ChairStudentList4',
+      name: 'ChairStudentList4',
+      component: ChairStudentList4,
+    },{
+      path: '/ChairStudentList5-8',
+      name: 'ChairStudentList5-8',
+      component: ChairStudentList5_8,
+    },
+    {
+      path: '/ChairField',
+      name: 'ChairField',
+      component: ChairField,
     },
   ],
 })

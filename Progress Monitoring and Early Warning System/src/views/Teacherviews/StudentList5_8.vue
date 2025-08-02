@@ -3,9 +3,11 @@
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
         <Avatar shape="circle" />
-        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">นิสิตปัจจุบัน</p></span>
+        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">อาจารย์</p></span>
       </div>
+
       <Divider />
+      
       <div class="sidebar-content">
         <Router-Link to="/TeachPro" class="sidebar-item">
           <p><i class="pi pi-user"></i>โปรไฟล์</p>
@@ -49,44 +51,55 @@
         </div>
       </nav>
 
-      
-    <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">นิสิตที่ปรึกษาปีที่ 2</h2>
-       <IconField style="width: 90%; margin: 0 auto;">
+     
+    <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">นิสิตที่ปรึกษาปีที่ 5-8</h2>
+      <IconField style="width: 90%; margin: 0 auto;">
         <InputIcon class="pi pi-search" />
         <InputText placeholder="ค้นหา (ชื่อ-นามสกุล, รหัสนิสิต)" style="border-radius: 100px; width: 100%;" />
         </IconField>
 
         <div style="text-align: left; margin-left: 4.5rem; margin-top: 2rem;">
         <Chip label="ภาคปกติ" style="background-color: green; color: white; margin: 0 auto; margin-bottom: 0.5rem; height: 2rem;" />
-            <DataTable :value="students" showGridlines tableStyle="width: 90%;">
+            <DataTable :value="studentsNY5_8" showGridlines tableStyle="width: 90%;">
                 <Column field="studentId" header="รหัสนิสิต"></Column>
                 <Column field="fullName" header="ชื่อ-นามสกุล"></Column>
-                <Column field="academicYear" header="ปีการศึกษา"></Column>
                 <Column field="semester" header="ภาค"></Column>
                 <Column field="phoneNumber" header="เบอร์โทรศัพท์"></Column>
                 <Column field="schedule" header="ตาราง">
-                <template #body>
-                <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
-                </template>
+                  <template #body>
+                  <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
+                  </template>
+                </Column>
+                
+                <Column field="Grade" header="ผลการเรียน">
+                  <template #body>
+                  <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
+                  </template>
                 </Column>
             </DataTable>
 
 
         <Chip label="ภาคพิเศษ" style="background-color: green; color: white; margin: 0 auto; margin-bottom: 0.5rem; margin-top: 1.5rem; height: 2rem;" />
-            <DataTable :value="students" showGridlines tableStyle="width: 90%;">
+            <DataTable :value="studentsSY5_8" showGridlines tableStyle="width: 90%;">
                 <Column field="studentId" header="รหัสนิสิต"></Column>
                 <Column field="fullName" header="ชื่อ-นามสกุล"></Column>
-                <Column field="academicYear" header="ปีการศึกษา"></Column>
                 <Column field="semester" header="ภาค"></Column>
                 <Column field="phoneNumber" header="เบอร์โทรศัพท์"></Column>
                 <Column field="schedule" header="ตาราง">
-                <template #body>
-                <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
-                </template>
+                  <template #body>
+                  <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
+                  </template>
+                </Column>
+                
+                <Column field="Grade" header="ผลการเรียน">
+                  <template #body>
+                  <Button icon="pi pi-eye" label="ดูตาราง" style="background-color: #02BC77; border-radius: 50px; color: white; border: none; padding: 0.5rem 1rem;" />
+                  </template>
                 </Column>
             </DataTable>
 
         </div>
+     
     </div>
   </div>
 </template>
