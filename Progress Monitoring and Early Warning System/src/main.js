@@ -31,6 +31,7 @@ import AutoComplete from 'primevue/autocomplete';
 import Chip from 'primevue/chip';
 import ScrollPanel from 'primevue/scrollpanel';
 import VirtualScroller from 'primevue/virtualscroller';
+import Select from 'primevue/select';
 
 
 
@@ -67,5 +68,6 @@ app.component('AutoComplete', AutoComplete);
 app.component('Chip', Chip);
 app.component('ScrollPanel', ScrollPanel);
 app.component('VirtualScroller', VirtualScroller);
+app.component('Select', Select);
 
 app.mount('#app')

@@ -49,21 +49,23 @@
         </div>
       </nav>
 
-      <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">โปรไฟล์ของฉัน</h2>
+     <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">โปรไฟล์ของฉัน</h2>
       <Card style="width: 25rem ;margin: 0 auto; height: 70vh;">
         <template #header>
           <div style="margin-top: 2rem; text-align: center;">
-            <Avatar shape="circle" size="xlarge" style="align-items: center;"/>
+          <Avatar shape="circle" size="xlarge" style="align-items: center;" class="pi pi-user"/>
           </div>
         </template>
         <template #content>
           <div class="profile-details">
-            <p><strong>ชื่อ</strong> ชื่อ</p>
-            <p><strong>นามสกุล:</strong> นามสกุล</p>
-            <p><strong>รหัสนิสิต:</strong> 6xxxxxxxxx</p>
-            <p><strong>ชั้นปี:</strong> 3</p>
-            <p><strong>คณะ:</strong> วิศวกรรมศาสตร์</p>
-            <p><strong>สาขา:</strong> วิศวกรรมคอมพิวเตอร์</p>
+            <p><strong>ชื่อ</strong><br>นาย ชื่อ</p>
+            <p><strong>นามสกุล:</strong><br> นามสกุล</p>
+            <p><strong>รหัสประจำตัว:</strong><br> 6xxxxxxxxx</p>
+            <p><strong>เพศ:</strong><br> ชาย</p>
+            <p><strong>เบอร์โทรศัพท์:</strong><br> 012-3456789</p>
+            <p><strong>คณะ:</strong><br> วิศวกรรมศาสตร์</p>
+            <p><strong>สาขา:</strong><br> วิศวกรรมคอมพิวเตอร์</p>
+            <p><strong>สถานะ:</strong><br> อาจารย์</p>
           </div>
         </template>
       </Card>

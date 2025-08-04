@@ -3,11 +3,11 @@
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
         <Avatar shape="circle" />
-        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">อาจารย์ประธานหลักสูตร</p></span>
+        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">อาจารย์ระดับคณะ</p></span>
       </div>
       <Divider />
       <div class="sidebar-content">
-        <Router-Link to="/TeachChair" class="sidebar-item">
+        <Router-Link to="/TeachField" class="sidebar-item">
           <p><i class="pi pi-user"></i>โปรไฟล์</p>
         </Router-Link>
 
@@ -18,30 +18,30 @@
         </div>
 
         <div class="sidebar-subsection" v-show="isChevronOpen">
-            <Router-Link to="/ChairStudentList1" class="sidebar-item">
+            <Router-Link to="/FieldStudentList1" class="sidebar-item">
               <p>ปีการศึกษา 1</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList2" class="sidebar-item">
+            <Router-Link to="/FieldStudentList2" class="sidebar-item">
               <p>ปีการศึกษา 2</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList3" class="sidebar-item">
+            <Router-Link to="/FieldStudentList3" class="sidebar-item">
               <p>ปีการศึกษา 3</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList4" class="sidebar-item">
+            <Router-Link to="/FieldStudentList4" class="sidebar-item">
               <p>ปีการศึกษา 4</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList5-8" class="sidebar-item">
+            <Router-Link to="/FieldStudentList5-8" class="sidebar-item">
               <p>ปีการศึกษา 5-8</p>
             </Router-Link>
         </div>
 
         <div class="sidebar-item-header" @click="toggleChevronChair">
-            <p><i class="pi pi-users"></i>นิสิตที่ปรึกษา</p>
+            <p><i class="pi pi-users"></i>นิสิตในคณะ</p>
             <i class="pi chevron-icon" :class="{ 'pi-chevron-right': !isChevronChairOpen, 'pi-chevron-down': isChevronChairOpen }"></i>
         </div>
 
         <div class="sidebar-subsection" v-show="isChevronChairOpen">
-            <Router-Link to="/StudentList1" class="sidebar-item">
+            <Router-Link to="/HeadField" class="sidebar-item">
               <p>สาขาเทคโนโลยีสารสนเทศ</p>
             </Router-Link>
         </div>

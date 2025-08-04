@@ -2,26 +2,21 @@
   <div class="main-layout-toggable">
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
-        <Avatar shape="circle" class="pi pi-user" />
+        <Avatar shape="circle" class="pi pi-user"/>
         <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">นิสิตปัจจุบัน</p></span>
       </div>
       <Divider />
       <div class="sidebar-content">
-        <Router-Link to="/profile" class="sidebar-item">
+        <Router-Link to="StudentCourse" class="sidebar-item">
+          <p ><i class="pi pi-users"></i>รายชื่อนิสิต</p>
+        </Router-Link>
+        <Router-Link to="/CourseCreate" class="sidebar-item">
+          <p ><i class="pi pi-star"></i>เพิ่มหลักสูตร</p>
+        </Router-Link>
+        <Router-Link to="/CoursePro" class="sidebar-item">
           <p ><i class="pi pi-user"></i>โปรไฟล์</p>
         </Router-Link>
-        <Router-Link to="/Education" class="sidebar-item">
-          <p><i class="pi pi-graduation-cap"></i>ผลการศึกษา</p>
-        </Router-Link>
-        <Router-Link to="/Overall" class="sidebar-item">
-          <p><i class="pi pi-file"></i>สถิติ</p>
-        </Router-Link>
-        <Router-Link to="/Table" class="sidebar-item">
-          <p><i class="pi pi-table"></i>ตารางหลักสูตรของนิสิต</p>
-        </Router-Link>
-        <Router-Link to="/Condition" class="sidebar-item">
-          <p><i class="pi pi-book"></i>ตรวจสอบเงื่อนไขจบการศึกษา</p>
-        </Router-Link>
+        
       </div>
     </aside>
 
@@ -38,7 +33,7 @@
       </nav>
 
       
-      <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">โปรไฟล์ของฉัน</h2>
+      <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">โปรไฟล์</h2>
       <Card style="width: 25rem ;margin: 0 auto; height: 70vh;">
         <template #header>
           <div style="margin-top: 2rem; text-align: center;">
@@ -49,12 +44,12 @@
           <div class="profile-details">
             <p><strong>ชื่อ</strong><br>นาย ชื่อ</p>
             <p><strong>นามสกุล:</strong><br> นามสกุล</p>
-            <p><strong>รหัสนิสิต:</strong><br> 6xxxxxxxxx</p>
+            <p><strong>รหัสประจำตัว:</strong><br> 6xxxxxxxxx</p>
             <p><strong>เพศ:</strong><br> ชาย</p>
             <p><strong>เบอร์โทรศัพท์:</strong><br> 012-3456789</p>
             <p><strong>คณะ:</strong><br> วิศวกรรมศาสตร์</p>
             <p><strong>สาขา:</strong><br> วิศวกรรมคอมพิวเตอร์</p>
-            <p><strong>สถานะ:</strong><br> นิสิตปัจจุบัน</p>
+            <p><strong>สถานะ:</strong><br> อาจารย์</p>
           </div>
         </template>
       </Card>

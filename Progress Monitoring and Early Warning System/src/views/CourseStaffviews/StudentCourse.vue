@@ -2,18 +2,18 @@
   <div class="main-layout-toggable">
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
       <div class="sidebar-header">
-        <Avatar shape="circle" />
+        <Avatar shape="circle" class="pi pi-user" />
         <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">นิสิตปัจจุบัน</p></span>
       </div>
       <Divider />
       <div class="sidebar-content">
-        <Router-Link to="AdStudent" class="sidebar-item">
+        <Router-Link to="StudentCourse" class="sidebar-item">
           <p ><i class="pi pi-users"></i>รายชื่อนิสิต</p>
         </Router-Link>
-        <Router-Link to="/Add" class="sidebar-item">
+        <Router-Link to="/CourseCreate" class="sidebar-item">
           <p ><i class="pi pi-star"></i>เพิ่มหลักสูตร</p>
         </Router-Link>
-        <Router-Link to="/AdminPro" class="sidebar-item">
+        <Router-Link to="/CoursePro" class="sidebar-item">
           <p ><i class="pi pi-user"></i>โปรไฟล์</p>
         </Router-Link>
         

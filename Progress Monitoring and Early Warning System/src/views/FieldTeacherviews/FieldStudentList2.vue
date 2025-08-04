@@ -1,13 +1,13 @@
 <template>
-    <div class="main-layout-toggable">
+  <div class="main-layout-toggable">
     <aside :class="['sidebar-toggable', { 'sidebar-hidden': !visible }]">
-        <div class="sidebar-header">
-            <Avatar shape="circle" />
-            <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">อาจารย์ประธานหลักสูตร</p></span>
-        </div>
-        <Divider />
-        <div class="sidebar-content">
-        <Router-Link to="/TeachChair" class="sidebar-item">
+      <div class="sidebar-header">
+        <Avatar shape="circle" />
+        <span class="font-bold">ธธธธธ <br> <p style="font-size: 0.6rem;">อาจารย์ระดับคณะ</p></span>
+      </div>
+      <Divider />
+      <div class="sidebar-content">
+        <Router-Link to="/TeachField" class="sidebar-item">
           <p><i class="pi pi-user"></i>โปรไฟล์</p>
         </Router-Link>
 
@@ -18,59 +18,59 @@
         </div>
 
         <div class="sidebar-subsection" v-show="isChevronOpen">
-            <Router-Link to="/ChairStudentList1" class="sidebar-item">
+            <Router-Link to="/FieldStudentList1" class="sidebar-item">
               <p>ปีการศึกษา 1</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList2" class="sidebar-item">
+            <Router-Link to="/FieldStudentList2" class="sidebar-item">
               <p>ปีการศึกษา 2</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList3" class="sidebar-item">
+            <Router-Link to="/FieldStudentList3" class="sidebar-item">
               <p>ปีการศึกษา 3</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList4" class="sidebar-item">
+            <Router-Link to="/FieldStudentList4" class="sidebar-item">
               <p>ปีการศึกษา 4</p>
             </Router-Link>
-            <Router-Link to="/ChairStudentList5-8" class="sidebar-item">
+            <Router-Link to="/FieldStudentList5-8" class="sidebar-item">
               <p>ปีการศึกษา 5-8</p>
             </Router-Link>
         </div>
 
         <div class="sidebar-item-header" @click="toggleChevronChair">
-            <p><i class="pi pi-users"></i>นิสิตที่ปรึกษา</p>
+            <p><i class="pi pi-users"></i>นิสิตในคณะ</p>
             <i class="pi chevron-icon" :class="{ 'pi-chevron-right': !isChevronChairOpen, 'pi-chevron-down': isChevronChairOpen }"></i>
         </div>
 
         <div class="sidebar-subsection" v-show="isChevronChairOpen">
-            <Router-Link to="/StudentList1" class="sidebar-item">
+            <Router-Link to="/HeadField" class="sidebar-item">
               <p>สาขาเทคโนโลยีสารสนเทศ</p>
             </Router-Link>
         </div>
 
-        </div>
+      </div>
     </aside>
 
     <div class="content-wrapper">
-        <nav class="navbar-top">
-            <Button icon="pi pi-bars" @click="visible = !visible" />
-            <div class="navbar-title">ระบบติดตามสถานะการเรียน</div>
-                <div class="navbar-right">
-                    <span>ชื่อผู้ใช้</span>
-                    <Router-Link to="/"> 
-                    <Button icon="pi pi-power-off" style="background-color: #02BC77; border: none;"/>
-                    </Router-Link>
-                </div>
-        </nav>
+      <nav class="navbar-top">
+        <Button icon="pi pi-bars" @click="visible = !visible" />
+        <div class="navbar-title">ระบบติดตามสถานะการเรียน</div>
+        <div class="navbar-right">
+          <span>ชื่อผู้ใช้</span>
+          <Router-Link to="/"> 
+          <Button icon="pi pi-power-off" style="background-color: #02BC77; border: none;"/>
+          </Router-Link>
+        </div>
+      </nav>
 
-
-        <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">นิสิตที่ปรึกษาปีที่ 4</h2>
-        <IconField style="width: 90%; margin: 0 auto;">
+      
+    <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">นิสิตที่ปรึกษาปีที่ 2</h2>
+       <IconField style="width: 90%; margin: 0 auto;">
         <InputIcon class="pi pi-search" />
         <InputText placeholder="ค้นหา (ชื่อ-นามสกุล, รหัสนิสิต)" style="border-radius: 100px; width: 100%;" />
         </IconField>
 
         <div style="text-align: left; margin-left: 4.5rem; margin-top: 2rem;">
         <Chip label="ภาคปกติ" style="background-color: green; color: white; margin: 0 auto; margin-bottom: 0.5rem; height: 2rem;" />
-            <DataTable :value="studentsNY4" showGridlines tableStyle="width: 90%;">
+            <DataTable :value="studentsNY2" showGridlines tableStyle="width: 90%;">
                 <Column field="studentId" header="รหัสนิสิต"></Column>
                 <Column field="fullName" header="ชื่อ-นามสกุล"></Column>
                 <Column field="semester" header="ภาค"></Column>
@@ -90,7 +90,7 @@
 
 
         <Chip label="ภาคพิเศษ" style="background-color: green; color: white; margin: 0 auto; margin-bottom: 0.5rem; margin-top: 1.5rem; height: 2rem;" />
-           <DataTable :value="studentsNY4" showGridlines tableStyle="width: 90%;">
+            <DataTable :value="studentsSY2" showGridlines tableStyle="width: 90%;">
                 <Column field="studentId" header="รหัสนิสิต"></Column>
                 <Column field="fullName" header="ชื่อ-นามสกุล"></Column>
                 <Column field="semester" header="ภาค"></Column>

@@ -72,7 +72,7 @@ const OnFormSubmit = ({ username, password }) => {
                 <label for="password">รหัสผ่าน</label>
                 <InputText type="password" id="password" v-model="initialValues.password" style="width: 100%;" placeholder="กรอกรหัสผ่าน" />
               </div>
-              <div>
+              <div style="text-align: right; margin-top: 0.5rem;">
                 <RouterLink to="/Forgot">ลืมรหัสผ่าน?</RouterLink>
               </div>
               <Button type="submit" label="เข้าสู่ระบบ" style="margin-top: 1rem; width: 100%;" />
@@ -87,14 +87,17 @@ const OnFormSubmit = ({ username, password }) => {
             <Router-Link to="/TeachChair">
               <Button label="อาจารย์ประธานหลักสูตร" style="width: 100%;"/>
             </Router-Link>
-             <Router-Link to="/TeachChair">
-              <Button label="อาจารย์ประธานหลักสูตร" style="width: 100%;"/>
+             <Router-Link to="/TeachField">
+              <Button label="อาจารย์ระดับคณะ" style="width: 100%;"/>
             </Router-Link>
-             <Router-Link to="/TeachChair">
-              <Button label="อาจารย์ประธานหลักสูตร" style="width: 100%;"/>
+             <Router-Link to="/Lecturer">
+              <Button label="อาจารย์ระดับภาค" style="width: 100%;"/>
             </Router-Link>
-            <Router-Link to="/AdminPro">
-              <Button label="Admin Login" style="width: 100%;"/>
+            <Router-Link to="/CoursePro">
+              <Button label="เจ้าหน้าที่หลักสูตร" style="width: 100%;"/>
+            </Router-Link>
+            <Router-Link to="/Statistic">
+              <Button label="เจ้าหน้าที่คณะ" style="width: 100%;"/>
             </Router-Link>
            </div>
         </template>

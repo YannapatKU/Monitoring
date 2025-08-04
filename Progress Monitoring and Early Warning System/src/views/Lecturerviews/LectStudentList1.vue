@@ -62,7 +62,7 @@
       </nav>
 
       
-     <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">สาขาเทคโนโลยีสารสนเทศ</h2>
+     <h2 style="font-weight: bold; margin-bottom: 2rem; padding: 1rem; ">นิสิตที่ปรึกษาปีที่ 1</h2>
         <IconField style="width: 90%; margin: 0 auto;">
         <InputIcon class="pi pi-search" />
         <InputText placeholder="ค้นหา (ชื่อ-นามสกุล, รหัสนิสิต)" style="border-radius: 100px; width: 100%;" />
