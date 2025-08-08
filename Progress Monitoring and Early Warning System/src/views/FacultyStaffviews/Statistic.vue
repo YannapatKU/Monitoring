@@ -44,13 +44,13 @@
                   @complete="searchSubjects" placeholder="ค้นหาวิชา..." />
               </td>
               <td style="padding: 0.5rem;">
-                <input type="text" v-model="academicYear" placeholder="2566" />
+                <InputText type="text" v-model="academicYear" placeholder="2568" />
               </td>
               <td style="padding: 0.5rem;">
                 <Select v-model="selectedSemester" :options="semesters" placeholder="เลือกภาคเรียน" />
               </td>
               <td style="padding: 0.5rem;">
-                <input type="text" v-model="studentCode" maxlength="2" style="width: 100%;" />
+                <InputText type="text" v-model="studentCode" maxlength="2" style="width: 100%;" />
               </td>
             </tr>
           </tbody>
